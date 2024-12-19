@@ -10,6 +10,12 @@ A simple tool to upload your Kindle screenshots to an image hosting service, wit
 
 _All deletions also remove the corresponding `wininfo_*.txt` files._
 
+## Screenshots
+
+![screenshot_2024_12_20T05_57_55+0800](readme.assets/screenshot_2024_12_20T05_57_55+0800.png)
+
+![image-20241220060042798](readme.assets/image-20241220060042798.png)
+
 ## Installation
 
 1. **Jailbreak Your Kindle**:
