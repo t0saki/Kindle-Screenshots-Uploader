@@ -29,19 +29,19 @@ _All deletions also remove the corresponding `wininfo_*.txt` files._
 
 ## Configuration
 
-Before using the uploader, ensure you have configured the upload URL and authentication code within the `upload_screenshots.sh` script:
+Before using the uploader, you need to configure the upload URL and authentication code within the `upload_screenshots.sh` script:
 
 ```sh
-UPLOAD_URL="https://some_img_hosting.com/upload"
-AUTH_CODE="some_auth_code"
+UPLOAD_URL="https://your_image_hosting_service.com/upload"
+AUTH_CODE="your_auth_code"
 SCREENSHOT_DIR="/mnt/us"
 ```
 
 - **UPLOAD_URL**: The endpoint of your image hosting service.
 - **AUTH_CODE**: The authentication code required by your upload service.
-- **SCREENSHOT_DIR**: The directory where Kindle stores screenshots(Typically `/mnt/us`).
+- **SCREENSHOT_DIR**: The directory where Kindle stores screenshots (Typically `/mnt/us`).
 
-**Note**: Depending on the server's API requirements, you may need to modify the `curl` command in the `upload_file` function to match the expected format.
+**Important**: Since this tool uses a self-hosted image hosting service, you need to set up your own image hosting server and provide the corresponding `UPLOAD_URL` and `AUTH_CODE` in the script. Depending on your server's API requirements, you may need to modify the `curl` command in the `upload_file` function to match the expected format.
 
 ## License
 
