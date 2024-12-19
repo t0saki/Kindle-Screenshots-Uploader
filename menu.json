@@ -1,0 +1,33 @@
+{
+	"comment001": "Upload Kindle Screenshots",
+	"comment002": "tosaki",
+	"items": [
+	{
+		"name": "Screenshots Uploader",
+		"priority": 1,
+		"items": [
+		{
+			"name": "Upload and Delete",
+			"exitmenu": false,
+			"status": false,
+			"action": "./bin/upload_screenshots.sh",
+			"params": "upload_and_delete"
+		},
+		{
+			"name": "Upload only",
+			"exitmenu": false,
+			"status": false,
+			"action": "./bin/upload_screenshots.sh",
+			"params": "upload"
+		},
+		{
+			"name": "Delete all screenshots",
+			"exitmenu": false,
+			"status": false,
+			"action": "./bin/upload_screenshots.sh",
+			"params": "delete"
+		}
+		]
+	}
+	]
+}
