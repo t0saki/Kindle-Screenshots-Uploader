@@ -43,6 +43,8 @@ SCREENSHOT_DIR="/mnt/us"
 
 **Important**: Since this tool uses a self-hosted image hosting service, you need to set up your own image hosting server and provide the corresponding `UPLOAD_URL` and `AUTH_CODE` in the script. Depending on your server's API requirements, you may need to modify the `curl` command in the `upload_file` function to match the expected format.
 
+I'm self-hosting a free and open-source Cloudflare Pages site based on [CloudFlare-ImgBed](https://github.com/MarSeventh/CloudFlare-ImgBed) for my image hosting service. You can set up your own instance or use any other image hosting service that supports direct image uploads via API.
+
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
