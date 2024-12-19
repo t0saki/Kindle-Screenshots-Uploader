@@ -14,7 +14,7 @@ _All deletions also remove the corresponding `wininfo_*.txt` files._
 
 ![screenshot_2024_12_20T05_57_55+0800](readme.assets/screenshot_2024_12_20T05_57_55+0800.png)
 
-![image-20241220060042798](readme.assets/image-20241220060042798.png)
+![image-20241220060756970](readme.assets/image-20241220060756970.png)
 
 ## Installation
 
