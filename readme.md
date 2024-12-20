@@ -1,6 +1,8 @@
 # Kindle Screenshots Uploader
 
-A simple tool to upload your Kindle screenshots to an image hosting service, with options to manage your screenshots directly from your device.
+[English](readme.md) | [简体中文](readme_zh.md)
+
+A simple tool to upload your Kindle screenshots to a WebDAV server or image hosting service directly from your Kindle device.
 
 ## Features
 
@@ -39,6 +41,8 @@ Before using the uploader, you need to configure the upload URL and authenticati
 
 ### WebDAV Server
 
+If you don't have a image hosting service, the WebDAV method is recommended.
+
 ```sh
 USE_WEBDAV=1
 
@@ -66,9 +70,9 @@ AUTH_CODE="some_auth_code"
 - **AUTH_CODE**: The authentication code required by your upload service.
 - **SCREENSHOT_DIR**: The directory where Kindle stores screenshots (Typically `/mnt/us`).
 
-**Important**: Since this tool uses a self-hosted image hosting service, you need to set up your own image hosting server and provide the corresponding `UPLOAD_URL` and `AUTH_CODE` in the script. Depending on your server's API requirements, you may need to modify the `curl` command in the `upload_file` function to match the expected format.
+    **Important**: Since this tool uses a self-hosted image hosting service, you need to set up your own image hosting server and provide the corresponding `UPLOAD_URL` and `AUTH_CODE` in the script. Depending on your server's API requirements, you may need to modify the `curl` command in the `upload_file` function to match the expected format.
 
-I'm self-hosting a free and open-source Cloudflare Pages site based on [CloudFlare-ImgBed](https://github.com/MarSeventh/CloudFlare-ImgBed) for my image hosting service. You can set up your own instance or use any other image hosting service that supports direct image uploads via API.
+    I'm self-hosting a free and open-source Cloudflare Pages site based on [CloudFlare-ImgBed](https://github.com/MarSeventh/CloudFlare-ImgBed) for my image hosting service. You can set up your own instance or use any other image hosting service that supports direct image uploads via API.
 
 ## License
 
