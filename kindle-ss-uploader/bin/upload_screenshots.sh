@@ -1,8 +1,16 @@
 #!/bin/sh
 
+USE_WEBDAV=0
+
+# Image hosting service settings
 UPLOAD_URL="https://some_img_hosting.com/upload"
 AUTH_CODE="some_auth_code"
 SCREENSHOT_DIR="/mnt/us"
+
+# WebDAV settings
+WEBDAV_URL="https://webdav.hostname:[port]/path"
+USERNAME="webdav_user"
+PASSWORD="webdav_password"
 
 ACTION="$1"
 
@@ -18,13 +26,18 @@ eips_msg() {
 
 upload_file() {
     PNG_FILE="$1"
-    # Show curl command and capture its output
-    CURL_OUTPUT=$(curl --fail --location --silent --show-error \
-         --request POST "${UPLOAD_URL}?authCode=${AUTH_CODE}" \
-         --header "User-Agent: UploadScript/1.0" \
-         --form "file=@$PNG_FILE" 2>&1)
 
-    # Check if curl succeeded
+    if [ $USE_WEBDAV -eq 1 ]; then
+        CURL_OUTPUT=$(curl --fail --location --silent --show-error \
+             --user "${USERNAME}:${PASSWORD}" \
+             --upload-file "$PNG_FILE" "${WEBDAV_URL}/" 2>&1)
+    else
+        CURL_OUTPUT=$(curl --fail --location --silent --show-error \
+            --request POST "${UPLOAD_URL}?authCode=${AUTH_CODE}" \
+            --header "User-Agent: UploadScript/1.0" \
+            --form "file=@$PNG_FILE" 2>&1)
+    fi
+
     if [ $? -ne 0 ]; then
         eips_msg "Upload failed: $CURL_OUTPUT"
         return 1
