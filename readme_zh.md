@@ -2,7 +2,7 @@
 
 [English](readme.md) | [简体中文](readme_zh.md)
 
-一个简单的工具，可以直接从 Kindle 设备将您的截图上传到 WebDAV 服务器或图片托管服务。
+一个简单的工具，可以直接从 Kindle 设备将您的截图上传到 WebDAV 服务器或图床。
 
 ## 功能
 
@@ -37,11 +37,11 @@ _所有删除操作也会删除相应的 `wininfo_*.txt` 文件。_
 
 ## 配置
 
-在使用上传工具之前，您需要根据您选择的上传方法（WebDAV 或图片托管服务）在 `upload_screenshots.sh` 脚本中配置上传 URL 和认证代码。
+在使用上传工具之前，您需要根据您选择的上传方法（WebDAV 或图床）在 `upload_screenshots.sh` 脚本中配置上传 URL 和认证代码。
 
 ### WebDAV 服务器
 
-如果您没有图片托管服务，推荐使用 WebDAV 方法。
+如果您没有图床，推荐使用 WebDAV 方法。
 
 ```sh
 USE_WEBDAV=1
@@ -57,7 +57,7 @@ PASSWORD="webdav_password"
 - **USERNAME**：您的 WebDAV 服务器用户名。
 - **PASSWORD**：您的 WebDAV 服务器密码。
 
-### 图片托管服务
+### 图床
 
 ```sh
 # Image hosting service settings
@@ -65,13 +65,13 @@ UPLOAD_URL="https://some_img_hosting.com/upload"
 AUTH_CODE="some_auth_code"
 ```
 
-- **USE_WEBDAV**：设置为 `0` 以使用图片托管服务上传截图。
-- **UPLOAD_URL**：您的图片托管服务的端点。
+- **USE_WEBDAV**：设置为 `0` 以使用图床上传截图。
+- **UPLOAD_URL**：您的图床的端点。
 - **AUTH_CODE**：上传服务所需的认证代码。
 
-    **重要**：由于此工具使用自托管的图片托管服务，您需要设置自己的图片托管服务器，并在脚本中提供相应的 `UPLOAD_URL` 和 `AUTH_CODE`。根据您的服务器 API 要求，您可能需要修改 `upload_file` 函数中的 `curl` 命令以匹配预期的格式。
+    **重要**：由于此工具使用自托管的图床，您需要设置自己的图床器，并在脚本中提供相应的 `UPLOAD_URL` 和 `AUTH_CODE`。根据您的服务器 API 要求，您可能需要修改 `upload_file` 函数中的 `curl` 命令以匹配预期的格式。
 
-    我使用了基于 [CloudFlare-ImgBed](https://github.com/MarSeventh/CloudFlare-ImgBed) 的 [Cloudflare Pages](https://pages.cloudflare.com/) 网站来自托管一个免费且开源的图片托管服务。您可以设置自己的实例，或使用任何其他支持通过 API 直接上传图片的图片托管服务。
+    我使用了基于 [CloudFlare-ImgBed](https://github.com/MarSeventh/CloudFlare-ImgBed) 的 [Cloudflare Pages](https://pages.cloudflare.com/) 网站来自托管一个免费且开源的图床。您可以设置自己的实例，或使用任何其他支持通过 API 直接上传图片的图床。
 
 ## 许可证
 
