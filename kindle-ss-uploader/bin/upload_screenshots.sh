@@ -5,13 +5,13 @@ USE_WEBDAV=0
 # Image hosting service settings
 UPLOAD_URL="https://some_img_hosting.com/upload"
 AUTH_CODE="some_auth_code"
-SCREENSHOT_DIR="/mnt/us"
 
 # WebDAV settings
 WEBDAV_URL="https://webdav.hostname:[port]/path"
 USERNAME="webdav_user"
 PASSWORD="webdav_password"
 
+SCREENSHOT_DIR="/mnt/us"
 ACTION="$1"
 
 X=12

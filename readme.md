@@ -35,14 +35,33 @@ _All deletions also remove the corresponding `wininfo_*.txt` files._
 
 ## Configuration
 
-Before using the uploader, you need to configure the upload URL and authentication code within the `upload_screenshots.sh` script:
+Before using the uploader, you need to configure the upload URL and authentication code within the `upload_screenshots.sh` script, based on your preferred upload method(WebDAV or Image Hosting Service).
+
+### WebDAV Server
 
 ```sh
-UPLOAD_URL="https://your_image_hosting_service.com/upload"
-AUTH_CODE="your_auth_code"
-SCREENSHOT_DIR="/mnt/us"
+USE_WEBDAV=1
+
+# WebDAV settings
+WEBDAV_URL="https://webdav.hostname:[port]/path"
+USERNAME="webdav_user"
+PASSWORD="webdav_password"
 ```
 
+- **USE_WEBDAV**: Set to `1` to use a WebDAV server for uploading screenshots.
+- **WEBDAV_URL**: The URL of your WebDAV server.
+- **USERNAME**: The username for your WebDAV server.
+- **PASSWORD**: The password for your WebDAV server.
+
+### Image Hosting Service
+
+```sh
+# Image hosting service settings
+UPLOAD_URL="https://some_img_hosting.com/upload"
+AUTH_CODE="some_auth_code"
+```
+
+- **USE_WEBDAV**: Set to `0` to use an image hosting service for uploading screenshots.
 - **UPLOAD_URL**: The endpoint of your image hosting service.
 - **AUTH_CODE**: The authentication code required by your upload service.
 - **SCREENSHOT_DIR**: The directory where Kindle stores screenshots (Typically `/mnt/us`).
