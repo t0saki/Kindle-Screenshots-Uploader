@@ -68,7 +68,6 @@ AUTH_CODE="some_auth_code"
 - **USE_WEBDAV**：设置为 `0` 以使用图片托管服务上传截图。
 - **UPLOAD_URL**：您的图片托管服务的端点。
 - **AUTH_CODE**：上传服务所需的认证代码。
-- **SCREENSHOT_DIR**：Kindle 存储截图的目录（通常为 `/mnt/us`）。
 
     **重要**：由于此工具使用自托管的图片托管服务，您需要设置自己的图片托管服务器，并在脚本中提供相应的 `UPLOAD_URL` 和 `AUTH_CODE`。根据您的服务器 API 要求，您可能需要修改 `upload_file` 函数中的 `curl` 命令以匹配预期的格式。
 

@@ -68,7 +68,6 @@ AUTH_CODE="some_auth_code"
 - **USE_WEBDAV**: Set to `0` to use an image hosting service for uploading screenshots.
 - **UPLOAD_URL**: The endpoint of your image hosting service.
 - **AUTH_CODE**: The authentication code required by your upload service.
-- **SCREENSHOT_DIR**: The directory where Kindle stores screenshots (Typically `/mnt/us`).
 
     **Important**: Since this tool uses a self-hosted image hosting service, you need to set up your own image hosting server and provide the corresponding `UPLOAD_URL` and `AUTH_CODE` in the script. Depending on your server's API requirements, you may need to modify the `curl` command in the `upload_file` function to match the expected format.
 
